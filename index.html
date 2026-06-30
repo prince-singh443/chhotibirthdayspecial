@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Chhoti! 🎂</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+
+    <canvas id="particleCanvas"></canvas>
+    <div id="cursorTrail"></div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="global-controls">
+        <button id="musicToggle" class="control-btn" aria-label="Toggle Music">🔊</button>
+        <button id="themeToggle" class="control-btn" aria-label="Toggle Theme">🌙</button>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <section id="loginScreen" class="active-screen">
+    <div class="glass-card login-card">
+        
+        <div id="timeLockZone" class="time-lock-container">
+            <h2 class="lock-title">Sabar Kar Bachaaa! ✋🛑</h2>
+            <p>Mera surprise dekhne ke liye itna intezar toh banta hai!</p>
+            
+            <div id="preCountdownDisplay" class="neon-countdown">00h : 00m : 00s</div>
+            
+            <p class="lock-subtext">Birthday aane to de , fir login karna... 😎</p>
+        </div>
+
+        <div id="loginFormZone" class="hidden">
+            <h2>Halt! Strictly for Chhoti Only 🛑</h2>
+            <p>Mera ka naam dalo tabhi andar entry milegi!</p>
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="Sender ka naam batao...">
+                <button id="loginBtn">Enter Universe ✨</button>
+            </div>
+            <div class="hint-container">
+                <button id="hintBtn" class="text-btn">Hint chahiye? 💡</button>
+                <p id="hintText" class="hidden">Naam bhul gyi kya... 'p' se start hota hai!</p>
+            </div>
+            <p id="loginError" class="error-text hidden">Galat naam! lagta hai party a,ount 2X karna parega. 😎</p>
+        </div>
+
+    </div>
+</section>
+
+    <main id="mainJourney" class="hidden">
+
+        <section id="welcomeSection" class="journey-section">
+            <div class="glass-card centered-content">
+                <h1 class="animate-text">Happy Birthday<br><span class="highlight">Shruti(Chhoti) ✨</span></h1>
+                <p class="subtitle">Welcome to your official birthday zone, Chhoti!</p>
+                
+                <div class="cake-container">
+                    <svg class="cake" viewBox="0 0 100 100" width="150">
+                        <path d="M20,80 Q50,75 80,80 L80,95 Q50,98 20,95 Z" fill="#ff74b1"/>
+                        <path d="M25,55 Q50,50 75,55 L75,80 Q50,75 25,80 Z" fill="#ffb7b2"/>
+                        <rect x="47" y="35" width="6" height="20" fill="#fff" rx="2"/>
+                        <path id="candleFlame" d="M50,15 C45,25 50,35 50,35 C50,35 55,25 50,15 Z" fill="#ffb703" class="flame-animation"/>
+                    </svg>
+                    <p id="blowInstruction">Flame par click karke candle bujhao aur shuru karo! 🎂</p>
+                </div>
+                
+                <button id="startJourneyBtn" class="primary-btn hidden">Let's Go! 🚀</button>
+            </div>
+        </section>
+
+        <section id="gallerySection" class="journey-section">
+            <h2 class="section-title">Crimes & Memories Partners</h2>
+            <div class="gallery-grid">
+               <!-- ========================================== -->
+
+<!-- ========================================== -->
+<section id="gallerySection" class="journey-section">
+    <h2 class="section-title">Crimes & Memories Partners</h2>
+    <div class="gallery-grid">
+        
+       
+        <div class="polaroid-card" onclick="openLightbox(this)">
+            <img src="1000014207.jpg" alt="Memory 1">
+            <p class="caption">Bhullakar hai kya ?... Naam likhwa kw photo li hai 😜</p>
+        </div>
+        
+       
+        <div class="polaroid-card" onclick="openLightbox(this)">
+            <img src="IMG-20240308-WA0009.jpg" alt="Memory 2">
+            <p class="caption">Best Memories 🥰</p>
+        </div>
+
+     
+          <div class="polaroid-card" onclick="openLightbox(this)">
+            <img src="IMG-20241108-WA0018.jpg" alt="Memory 1">
+            <p class="caption">Missing every family functions 🥲</p>
+        </div>
+         <div class="polaroid-card" onclick="openLightbox(this)">
+            <img src="IMG20260305222556_quick.jpg" alt="Memory 2">
+            <p class="caption">Datuuliiii 😁</p>
+        </div>
+    </div>
+</section>
+            </div>
+        </section>
+
+        <section id="timelineSection" class="journey-section">
+            <h2 class="section-title">The Evolution of Chhoti</h2>
+            <div class="timeline-container">
+                <div class="timeline-item left scroll-reveal">
+                    <div class="glass-card timeline-content">
+                        <h3>The Entry 🍼</h3>
+                        <p>Daatuul jii Happy Birthday!</p>
+                    </div>
+                </div>
+                <div class="timeline-item right scroll-reveal">
+                    <div class="glass-card timeline-content">
+                        <h3>Party purposal 👑</h3>
+                        <p>Itna mehnat ka party to banti hai....... dekh lo online karna hai ya fir ghaar aake degi (Whatsapp kar dena)!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="specialSection" class="journey-section">
+            <h2 class="section-title">True Facts About You 😎</h2>
+            <div class="interactive-cards">
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front glass-card">
+                            <h3>Fact #1</h3>
+                            <p>Click to Reveal</p>
+                        </div>
+                        <div class="flip-card-back glass-card">
+                            <p>Mehnati to hai.....(serious mtt lena mazak kar rha hu😁)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card" onclick="flipCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front glass-card">
+                            <h3>Fact #2</h3>
+                            <p>Click to Reveal</p>
+                        </div>
+                        <div class="flip-card-back glass-card">
+                            <p>Supportive bhi hai....(isse bhi serious mtt lena😂).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="letterSection" class="journey-section">
+            <div class="glass-card letter-box">
+                <h2 class="letter-title">Suno Chhoti... 📝</h2>
+                <div id="typewriterText" class="typewriter-container"></div>
+            </div>
+        </section>
+
+        <section id="wishWallSection" class="journey-section">
+            <h2 class="section-title">Good Vibes Only ✨</h2>
+            <div class="wish-wall" id="wishWallContainer"></div>
+        </section>
+
+        <section id="surpriseSection" class="journey-section">
+            <h2 class="section-title">Final Boss Box 🎁</h2>
+            <div class="countdown-container glass-card">
+                <h3>Gift Unlocking In:</h3>
+                <div id="countdownDisplay">00:00:00</div>
+            </div>
+            
+            <div class="gift-box-wrapper">
+                <div id="giftBox" class="gift-box" onclick="triggerFinalCelebration()">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+
+<!-- ========================================== -->
+<section id="finalCelebration" class="journey-section hidden">
+    <div class="glass-card celebration-banner">
+        <h1 class="pulse-text">Happy Birthday Chhoti! 🎉</h1>
+        <p>Party taiyar rkhna. Have a blast, Shruti!</p>
+        
+        <!-- NEW: Fun Interactive Question Box -->
+        <div class="glass-card question-box" style="margin-top: 30px; border-color: var(--accent-pink);">
+            <h3 style="font-family: var(--font-primary); font-size: 1.2rem; line-height: 1.6; color: var(--text-primary);">
+                Suno, sun rhe khub ghum rhi dusre relative ke yaha, kabhi hmm jaise log ke ghar bhi aa jaya kar! Itni mehnat kiye hai tere liye... 😎 <br><br>
+                Bol, mai aa rha hu ghar 22 July ko. Tum aa rhi hai to mai receive kar lunga?
+            </h3>
+            
+            <div class="btn-group" style="margin-top: 25px; display: flex; justify-content: center; gap: 20px; position: relative; height: 60px;">
+                <button id="yesBtn" class="primary-btn" style="background: linear-gradient(45deg, #00e5ff, #00838f); width: 100px;">Haan ✅</button>
+                <button id="noBtn" class="primary-btn" style="background: linear-gradient(45deg, #ff4791, #d81b60); width: 100px; position: absolute; left: 55%;">Nahi ❌</button>
+            </div>
+        </div>
+
+        <div class="easter-egg-zone" onclick="triggerEasterEgg()" style="margin-top: 40px;">
+            <span>Bhai ka secret message 🤫</span>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <div id="lightbox" class="lightbox hidden" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightboxImg" src="" alt="Enlarged view">
+        <div id="lightboxCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
