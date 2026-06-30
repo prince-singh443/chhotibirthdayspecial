@@ -222,7 +222,7 @@ function startTypewriterEngine() {
 }
 
 /* WISH WALL ELEMENT SPARKLES */
-const wishes = ["Infinite joy! ⭐", "Keep Shining ✨", "Stay Bindass Chhoti! 💫", "Success Ahead! 👑", "Happy Birthday! 🎉","Radhey Rani ki kripa bani rahe! ☺️","Enjoy your day! 😉"];
+const wishes = ["Infinite joy! ⭐", "Keep Shining! ✨" , "Stay Bindass Chhoti! 💫", "Success Ahead! 👑", "Happy Birthday! 🎉","Radhey Rani ki kripa bani rahe! ☺️","Enjoy your day! 😉"];
 const wall = document.getElementById("wishWallContainer");
 if (wall) {
     wishes.forEach((wish, idx) => {
