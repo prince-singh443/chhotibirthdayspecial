@@ -208,7 +208,7 @@ function setupNavigationCore() {
 function startTypewriterEngine() {
     State.letterTyped = true;
     const targetContainer = document.getElementById("typewriterText");
-    const message = `Yo Shruti... 😎\n\nZyada emotional baatein toh mujhe aati nahi, par tumhara birthday hai toh bolna padega. Choti se kab badi ho gayi tum pata hi nahi chala (height chod ke, haha!).\n\nHar baat par daat dikhana, aur baat-baat par bahas karna😉 tumhara signature style hai. Par seriously, joke apart, you are the best sister one could ask for. Kaafi sahi aur samajhdaar hoti ja rahi ho.\n\nIs saal jo bhi goals hain tumhare, sab poore karo. Mehnat karo aur hamesha aise hi bindass raho. Happy Birthday Chhoti!\n\nTreat ready rakhna,\nPrince`;
+    const message = `Dear Chhoti... 😎\n\nZyada emotional baatein toh mujhe aati nahi, par tumhara birthday hai toh bolna padega. Choti se kab badi ho gayi tum pata hi nahi chala (height chod ke, haha!).\n\nHar baat par daat dikhana, aur baat-baat par bahas karna😉 tumhara signature style hai. Par seriously, joke apart, you are the best sister one could ask for. Kaafi sahi aur samajhdaar hoti ja rahi ho.\n\nIs saal jo bhi goals hain tumhare, sab poore karo. Mehnat karo aur hamesha aise hi bindass raho. Happy Birthday Chhoti!\n\nTreat ready rakhna,\nYour brother Prince Singh🌟`;
     
     let index = 0;
     function type() {
